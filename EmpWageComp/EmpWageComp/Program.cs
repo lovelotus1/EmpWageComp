@@ -12,9 +12,10 @@ Console.WriteLine("Welcome to Employee Wage Computation Program\n");
 //Console.WriteLine("Lenovo".ToString());
 //EmpAttendance Lenovo = new EmpAttendance("Lenovo", 30, 3, 30);
 //Lenovo.GetMonthlyEmpWage();
-EmpWageBuilderArray empWageBuilder = new EmpWageBuilderArray();
-empWageBuilder.addCompanyEmpWage("Dell", 20, 2, 10);
-empWageBuilder.addCompanyEmpWage("HP", 10, 4, 20);
+EmpWageBuilderList empWageBuilder = new EmpWageBuilderList();
+empWageBuilder.AddCompanyEmpWageToList("dell", 10, 4, 20);
+empWageBuilder.AddCompanyEmpWageToList("HP", 20, 5, 20);
+empWageBuilder.AddCompanyEmpWageToList("Lenovo", 30, 3, 30);
 empWageBuilder.computeEmpWage();
 
 Console.ReadLine();
