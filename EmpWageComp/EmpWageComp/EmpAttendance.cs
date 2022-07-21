@@ -18,6 +18,22 @@ namespace EmpWageComputation
             if (randomInt == EMP_PRESENT)
             {
                 Console.WriteLine("Employee is Present");
+                int empHrs = 0;
+                int empWage_Per_hr = 20;
+                int daily_Emp_Wage = 0;
+                if (randomInt == EMP_PRESENT)
+                {
+                    empHrs = 8;
+
+                }
+                else
+                {
+                    empHrs = 0;
+                }
+
+
+                daily_Emp_Wage = empHrs * empWage_Per_hr;
+                Console.WriteLine("Daily Employee Wage is : " + daily_Emp_Wage);
             }
             else
             {
