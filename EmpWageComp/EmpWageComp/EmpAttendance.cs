@@ -20,24 +20,27 @@ namespace EmpWageComputation
                 Console.WriteLine("Employee is Present");
                 int empHrs = 0;
                 int empWage_Per_hr = 20;
-                int daily_Emp_Wage = 0;
-                if (randomInt == EMP_PRESENT)
+                int EMP_FULL_TIME = 1;
+                int EMP_PART_TIME = 0;
+                randomInt = random.Next(0, 2);
+                if (randomInt == EMP_FULL_TIME)
                 {
                     empHrs = 8;
+                    EMP_FULL_TIME = empHrs * empWage_Per_hr;
+                    Console.WriteLine("Employee Full Time Wage is : " + EMP_FULL_TIME);
 
+
+                }
+                else if (randomInt == EMP_PART_TIME)
+                {
+                    empHrs = 4;
+                    EMP_PART_TIME = empHrs * empWage_Per_hr;
+                    Console.WriteLine("Employee Part Time Wage is : " + EMP_PART_TIME);
                 }
                 else
                 {
-                    empHrs = 0;
+                    Console.WriteLine("Employe is Absent");
                 }
-
-
-                daily_Emp_Wage = empHrs * empWage_Per_hr;
-                Console.WriteLine("Daily Employee Wage is : " + daily_Emp_Wage);
-            }
-            else
-            {
-                Console.WriteLine("Employe is Absent");
             }
         }
     }
